@@ -103,11 +103,11 @@
         uniformsTerrain[ "tDiffuse1" ].texture = detailTexture;
         uniformsTerrain[ "tDetail" ].texture = detailTexture;
         uniformsTerrain[ "enableDiffuse1" ].value = true;
-        uniformsTerrain[ "enableDiffuse2" ].value = true;
+        uniformsTerrain[ "enableDiffuse2" ].value = false;
         uniformsTerrain[ "enableSpecular" ].value = true;
 
         // diffuse is based on the light reflection
-        uniformsTerrain[ "uDiffuseColor" ].value.setHex(0xcdd6c5);
+        uniformsTerrain[ "uDiffuseColor" ].value.setHex(0x414141);
         uniformsTerrain[ "uSpecularColor" ].value.setHex(0xff0000);
         // is the base color of the terrain
         uniformsTerrain[ "uAmbientColor" ].value.setHex(0x3b5b2c);
