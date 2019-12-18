@@ -148,7 +148,7 @@ function init()
 	////////////
 	
 	// texture used to generate "bumpiness"
-	var bumpTexture = new THREE.ImageUtils.loadTexture( 'assets/dem2.png' );
+	var bumpTexture = new THREE.ImageUtils.loadTexture( 'assets/CC2dem.png' );
 	bumpTexture.wrapS = bumpTexture.wrapT = THREE.RepeatWrapping; 
 	// magnitude of normal displacement
 	var bumpScale   = 250.0;
@@ -190,7 +190,7 @@ function init()
 		// side: THREE.DoubleSide
 	}   );
 		
-	var planeGeo = new THREE.PlaneGeometry( 1609, 892, 256, 256 );
+	var planeGeo = new THREE.PlaneGeometry( 2000, 2000, 256, 256 );
 	var plane = new THREE.Mesh(	planeGeo, customMaterial );
 	plane.rotation.x = -Math.PI / 2;
 	plane.position.y = -100;
