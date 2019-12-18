@@ -121,7 +121,7 @@ function init()
 	stats = new Stats();
 	stats.domElement.style.position = 'absolute';
 	stats.domElement.style.bottom = '0px';
-	stats.domElement.style.zIndex = 100;
+	stats.domElement.style.zIndex = 125;
 	container.appendChild( stats.domElement );
 	// LIGHT
 	var light = new THREE.PointLight(0xffffff);
@@ -130,9 +130,9 @@ function init()
 	// FLOOR
 	var floorTexture = new THREE.ImageUtils.loadTexture( 'images/checkerboard.jpg' );
 	floorTexture.wrapS = floorTexture.wrapT = THREE.RepeatWrapping; 
-	floorTexture.repeat.set( 10, 10 );
+	floorTexture.repeat.set( 1, 1);
 	var floorMaterial = new THREE.MeshBasicMaterial( { map: floorTexture, side: THREE.DoubleSide } );
-	var floorGeometry = new THREE.PlaneGeometry(1000, 1000, 10, 10);
+	var floorGeometry = new THREE.PlaneGeometry(1500, 1500, 10, 10);
 	var floor = new THREE.Mesh(floorGeometry, floorMaterial);
 	floor.position.y = -0.5;
 	floor.rotation.x = Math.PI / 2;
@@ -148,7 +148,7 @@ function init()
 	////////////
 	
 	// texture used to generate "bumpiness"
-	var bumpTexture = new THREE.ImageUtils.loadTexture( 'assets/dem2.png' );
+	var bumpTexture = new THREE.ImageUtils.loadTexture( 'assets/salyersville.jpg' );
 	bumpTexture.wrapS = bumpTexture.wrapT = THREE.RepeatWrapping; 
 	// magnitude of normal displacement
 	var bumpScale   = 250.0;
@@ -190,10 +190,10 @@ function init()
 		// side: THREE.DoubleSide
 	}   );
 		
-	var planeGeo = new THREE.PlaneGeometry( 1609, 892, 256, 256 );
+	var planeGeo = new THREE.PlaneGeometry( 12000, 12000, 256, 256 );
 	var plane = new THREE.Mesh(	planeGeo, customMaterial );
 	plane.rotation.x = -Math.PI / 2;
-	plane.position.y = -100;
+	plane.position.y = -10;
 	scene.add( plane );
 
 
